@@ -212,7 +212,7 @@ export class PaymentApiRouter {
    */
   private verifyWebhook(req: Request, res: Response): void {
     try {
-      const payload = req.body as WebhookPayload
+      const payload = req.body as unknown as WebhookPayload
 
       if (!payload.signature) {
         res.status(400).json({ success: false, message: '서명이 없습니다' })

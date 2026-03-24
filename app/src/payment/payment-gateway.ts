@@ -15,7 +15,6 @@ import {
   WebhookPayload,
   MerchantConfig,
   Transaction,
-  Currency,
 } from './types'
 import {
   generatePaymentId,
